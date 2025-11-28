@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SecureLife Insurance - Contact & Quote</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#f8fafc;color:#0f172a;line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:900px;margin:0 auto;padding:0 1.5rem;}
+    header{background:#0f172a;color:#e5e7eb;position:sticky;top:0;z-index:10;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 0;}
+    .logo{display:flex;align-items:center;gap:0.4rem;font-weight:700;letter-spacing:0.05em;}
+    .logo-mark{width:26px;height:26px;border-radius:999px;border:2px solid #38bdf8;display:flex;align-items:center;justify-content:center;font-size:0.8rem;}
+    .nav-links{display:flex;gap:1.3rem;font-size:0.95rem;}
+    .nav-links a{opacity:0.85;}
+    .nav-links a:hover{opacity:1;color:#38bdf8;}
+    main{padding:2.5rem 0 2rem;}
+    h1{font-size:1.9rem;margin-bottom:0.5rem;}
+    p.lead{font-size:0.96rem;color:#4b5563;margin-bottom:1.3rem;}
+    .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr);gap:1.8rem;align-items:flex-start;}
+    .info p{font-size:0.94rem;color:#4b5563;margin-bottom:0.5rem;}
+    .label{font-weight:600;color:#0f172a;}
+    .badge{display:inline-flex;padding:0.25rem 0.65rem;border-radius:999px;background:#ecfdf3;color:#166534;font-size:0.75rem;margin-top:0.7rem;}
+    form{background:#fff;border-radius:1rem;border:1px solid #e5e7eb;padding:1.2rem 1.3rem;}
+    .row{display:flex;gap:0.9rem;}
+    .field{margin-bottom:0.85rem;flex:1;}
+    label{display:block;font-size:0.8rem;color:#4b5563;margin-bottom:0.2rem;}
+    input,select,textarea{width:100%;border-radius:0.6rem;border:1px solid #d1d5db;padding:0.55rem 0.6rem;font-size:0.87rem;background:#f9fafb;outline:none;}
+    input:focus,select:focus,textarea:focus{border-color:#0ea5e9;background:#fff;}
+    textarea{min-height:90px;resize:vertical;}
+    .note{font-size:0.75rem;color:#9ca3af;margin-bottom:0.7rem;}
+    .btn{border:none;border-radius:999px;padding:0.7rem 1.2rem;font-size:0.9rem;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;cursor:pointer;font-weight:600;}
+    .btn:hover{opacity:0.95;}
+    .success{display:none;font-size:0.8rem;color:#16a34a;margin-top:0.5rem;}
+    footer{padding:1.5rem 0 2rem;border-top:1px solid #e5e7eb;font-size:0.78rem;color:#6b7280;margin-top:2rem;}
+    .footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;}
+    .footer-links{display:flex;gap:1rem;}
+    .footer-links a:hover{color:#0f172a;}
+    @media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr);}}
+    @media (max-width:640px){.nav-links{display:none;}.row{flex-direction:column;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">SL</div><span>SecureLife</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="claims.html">Claims</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Contact & Get a Quote</h1>
+    <p class="lead">
+      Share a few details and our licensed advisor will reach out with customised plan options
+      for you and your family.
+    </p>
+
+    <div class="grid">
+      <div class="info">
+        <p><span class="label">Phone:</span> +91-99999-00000</p>
+        <p><span class="label">Email:</span> hello@securelife.insure</p>
+        <p><span class="label">Office hours:</span> Monday – Saturday, 9:00 AM to 7:00 PM</p>
+        <p><span class="label">WhatsApp:</span> +91-88888-11111</p>
+        <span class="badge">Average response time: under 15 minutes</span>
+      </div>
+
+      <form id="quoteForm">
+        <div class="row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+91-" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="coverage">Type of coverage</label>
+            <select id="coverage" name="coverage">
+              <option value="">Select an option</option>
+              <option value="life">Life Insurance</option>
+              <option value="health">Health Insurance</option>
+              <option value="motor">Car / Two-wheeler</option>
+              <option value="home">Home Insurance</option>
+              <option value="combo">Combination plan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Anything specific we should know?</label>
+          <textarea id="message" name="message" placeholder="E.g. family size, existing cover, budget range"></textarea>
+        </div>
+
+        <p class="note">
+          By submitting this form, you agree to be contacted via phone, SMS or email for policy suggestions.
+          We value your privacy and never spam.
+        </p>
+
+        <button type="submit" class="btn">Request my free quote</button>
+        <p id="success" class="success">
+          Thank you! Your details have been submitted. Our advisor will contact you shortly.
+        </p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> SecureLife Insurance Co. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("quoteForm");
+  const success = document.getElementById("success");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    if (!name || !phone) {
+      alert("Please fill your name and phone number.");
+      return;
+    }
+    // Here you would send the form data to your backend (e.g. using fetch()).
+    form.reset();
+    success.style.display = "block";
+    setTimeout(() => { success.style.display = "none"; }, 5000);
+  });
+</script>
+</body>
+</html>

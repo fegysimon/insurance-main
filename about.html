@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SecureLife Insurance - About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#f8fafc;color:#0f172a;line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:900px;margin:0 auto;padding:0 1.5rem;}
+    header{background:#0f172a;color:#e5e7eb;position:sticky;top:0;z-index:10;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 0;}
+    .logo{display:flex;align-items:center;gap:0.4rem;font-weight:700;letter-spacing:0.05em;}
+    .logo-mark{width:26px;height:26px;border-radius:999px;border:2px solid #38bdf8;display:flex;align-items:center;justify-content:center;font-size:0.8rem;}
+    .nav-links{display:flex;gap:1.3rem;font-size:0.95rem;}
+    .nav-links a{opacity:0.85;}
+    .nav-links a:hover{opacity:1;color:#38bdf8;}
+    main{padding:2.5rem 0 2rem;}
+    h1{font-size:1.9rem;margin-bottom:0.6rem;}
+    h2{font-size:1.25rem;margin:1.8rem 0 0.5rem;}
+    p{font-size:0.96rem;color:#4b5563;margin-bottom:0.7rem;}
+    .pill-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0 1.5rem;}
+    .pill{padding:0.25rem 0.7rem;border-radius:999px;background:#e0f2fe;font-size:0.78rem;color:#0369a1;}
+    ul{margin-left:1rem;font-size:0.94rem;color:#4b5563;}
+    li{margin-bottom:0.4rem;}
+    .stats{display:flex;flex-wrap:wrap;gap:1rem;margin:1.2rem 0;}
+    .stat-card{background:#fff;border-radius:0.9rem;border:1px solid #e5e7eb;padding:0.9rem 1rem;flex:1 1 150px;}
+    .stat-number{font-size:1.3rem;font-weight:700;}
+    .stat-label{font-size:0.8rem;color:#6b7280;}
+    footer{padding:1.5rem 0 2rem;border-top:1px solid #e5e7eb;font-size:0.78rem;color:#6b7280;margin-top:2rem;}
+    .footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;}
+    .footer-links{display:flex;gap:1rem;}
+    .footer-links a:hover{color:#0f172a;}
+    @media (max-width:640px){.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">SL</div><span>SecureLife</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="claims.html">Claims</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>About SecureLife Insurance</h1>
+    <p>
+      SecureLife Insurance was created with a simple idea: insurance should be easy to understand,
+      simple to buy and dependable when life doesn’t go as planned.
+    </p>
+    <p>
+      For families, professionals and business owners, we provide a range of protection solutions
+      that combine modern technology with human support.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">10,000+ policies issued</span>
+      <span class="pill">24×7 claims assistance</span>
+      <span class="pill">Pan-India presence</span>
+    </div>
+
+    <h2>Our mission</h2>
+    <p>
+      To help every family build a safety net around their dreams, through honest advice, fair pricing
+      and fast claim settlements.
+    </p>
+
+    <h2>What we offer</h2>
+    <ul>
+      <li>Life insurance plans tailored to your age, income and goals.</li>
+      <li>Health insurance with cashless treatment at network hospitals.</li>
+      <li>Motor insurance for cars and two-wheelers with instant policy download.</li>
+      <li>Home insurance to protect your house and valuables.</li>
+    </ul>
+
+    <h2>Numbers we’re proud of</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Claim settlement ratio (last FY)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">30 mins</div>
+        <div class="stat-label">Average policy issuance time</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Cities served across India</div>
+      </div>
+    </div>
+
+    <h2>How we work</h2>
+    <p>
+      We start with listening. Our licensed advisors understand your current situation, existing cover
+      and future goals before recommending any plan. Every recommendation is:
+    </p>
+    <ul>
+      <li>Free from jargon – we explain in plain language.</li>
+      <li>Transparent – premiums, benefits and exclusions are clearly listed.</li>
+      <li>Flexible – you can upgrade or modify coverage as life changes.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> SecureLife Insurance Co. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -1,86 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Outpatient Section</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-</div>
-    <div id="genesys-support-center"></div
-        h1, p {
-            margin: 50;
-        }
-
-        #backToFirstPageButton {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 15px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 15px;
-        }
-
-        #backToFirstPageButton:hover {
-            background-color: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>SecureLife Insurance - Claims</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#f8fafc;color:#0f172a;line-height:1.6;}
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:900px;margin:0 auto;padding:0 1.5rem;}
+    header{background:#0f172a;color:#e5e7eb;position:sticky;top:0;z-index:10;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 0;}
+    .logo{display:flex;align-items:center;gap:0.4rem;font-weight:700;letter-spacing:0.05em;}
+    .logo-mark{width:26px;height:26px;border-radius:999px;border:2px solid #38bdf8;display:flex;align-items:center;justify-content:center;font-size:0.8rem;}
+    .nav-links{display:flex;gap:1.3rem;font-size:0.95rem;}
+    .nav-links a{opacity:0.85;}
+    .nav-links a:hover{opacity:1;color:#38bdf8;}
+    main{padding:2.5rem 0 2rem;}
+    h1{font-size:1.9rem;margin-bottom:0.5rem;}
+    p.lead{font-size:0.96rem;color:#4b5563;margin-bottom:1.5rem;}
+    h2{font-size:1.25rem;margin:1.5rem 0 0.5rem;}
+    p{font-size:0.95rem;color:#4b5563;margin-bottom:0.6rem;}
+    .steps{margin-top:1rem;}
+    .step{background:#fff;border-radius:0.9rem;border:1px solid #e5e7eb;padding:0.9rem 1rem;margin-bottom:0.8rem;}
+    .step-title{font-weight:600;font-size:0.98rem;margin-bottom:0.3rem;}
+    .badge{display:inline-flex;padding:0.15rem 0.55rem;border-radius:999px;background:#e0f2fe;color:#0369a1;font-size:0.75rem;margin-bottom:0.3rem;}
+    ul{margin-left:1rem;font-size:0.9rem;color:#4b5563;margin-bottom:0.7rem;}
+    li{margin-bottom:0.3rem;}
+    .contact-box{margin-top:1.5rem;background:#eef2ff;border-radius:0.9rem;padding:0.9rem 1rem;font-size:0.9rem;}
+    .contact-box strong{display:block;margin-bottom:0.4rem;}
+    footer{padding:1.5rem 0 2rem;border-top:1px solid #e5e7eb;font-size:0.78rem;color:#6b7280;margin-top:2rem;}
+    .footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;}
+    .footer-links{display:flex;gap:1rem;}
+    .footer-links a:hover{color:#0f172a;}
+    @media (max-width:640px){.nav-links{display:none;}}
+  </style>
 </head>
 <body>
-
 <header>
-    <h1>Outpatient Section</h1>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">SL</div><span>SecureLife</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="claims.html">Claims</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
 <main>
-    <!-- Your content for the second page goes here -->
+  <div class="container">
+    <h1>How to file a claim</h1>
+    <p class="lead">
+      We know that making a claim usually means you’re going through a difficult time.
+      Our goal is to keep the process simple and transparent.
+    </p>
 
-    <!-- Back to First Page Button -->
-    <button id="backToFirstPageButton">Back to First Page</button>
+    <h2>Simple 4-step process</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="badge">Step 1</div>
+        <div class="step-title">Notify us</div>
+        <p>
+          Inform us about the incident within 24 hours (for health/motor) or as soon as reasonably possible (for life/home).
+        </p>
+        <ul>
+          <li>Call our 24×7 helpline: <strong>1800-123-456</strong></li>
+          <li>Email: <strong>claims@securelife.insure</strong></li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="badge">Step 2</div>
+        <div class="step-title">Submit documents</div>
+        <p>Our team will share a simple checklist based on the type of claim. Common documents include:</p>
+        <ul>
+          <li>Policy copy and ID proof</li>
+          <li>Hospital records / FIR / Death certificate (as applicable)</li>
+          <li>Bank details for claim payout</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <div class="badge">Step 3</div>
+        <div class="step-title">Assessment</div>
+        <p>
+          We review your documents and may ask for clarifications if required. Most claims are assessed within
+          <strong>3–7 working days</strong> after receiving complete documents.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="badge">Step 4</div>
+        <div class="step-title">Settlement</div>
+        <p>
+          Once approved, the claim amount is transferred directly to the registered bank account. You’ll receive SMS and email updates at every step.
+        </p>
+      </div>
+    </div>
+
+    <h2>Cashless health claims</h2>
+    <p>For planned or emergency hospitalisation at network hospitals:</p>
+    <ul>
+      <li>Show your e-health card at the hospital help desk.</li>
+      <li>Hospital will send us a pre-authorisation request.</li>
+      <li>We coordinate directly with the hospital for payments as per policy terms.</li>
+    </ul>
+
+    <h2>Motor insurance claims</h2>
+    <p>After an accident or damage:</p>
+    <ul>
+      <li>Ensure everyone is safe and call emergency services if needed.</li>
+      <li>Inform us before the vehicle is moved for repairs.</li>
+      <li>We arrange an inspection and guide you to a network garage if you want cashless repair.</li>
+    </ul>
+
+    <div class="contact-box">
+      <strong>Need help with an ongoing claim?</strong>
+      Call our dedicated claims care team at 1800-123-456 (toll-free) or write to claims@securelife.insure with your policy number.
+    </div>
+  </div>
 </main>
- 
-<script>
-  (function (g, e, n, es, ys) {
-    g['_genesysJs'] = e;
-    g[e] = g[e] || function () {
-      (g[e].q = g[e].q || []).push(arguments)
-    };
-    g[e].t = 1 * new Date();
-    g[e].c = es;
-    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-  })(window, 'Genesys', 'https://apps.aps1.pure.cloud/genesys-bootstrap/genesys.min.js', {
-    environment: 'prod-aps1',
-    deploymentId: '4db237b8-a4bd-4901-bc57-951eb279d39d'
-  });
-        
-    // Back to First Page Button Event Listener
-    document.getElementById('backToFirstPageButton').addEventListener('click', function() {
-        // Use the browser's history object to go back
-        window.history.back();
-    });
-</script>
 
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> SecureLife Insurance Co. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

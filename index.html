@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SecureLife Insurance - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SecureLife Insurance - Protect what matters most with simple, transparent insurance." />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    body { background:#f8fafc; color:#0f172a; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+
+    /* Layout */
+    .container { max-width:1100px; margin:0 auto; padding:0 1.5rem; }
+
+    header { background:#0f172a; color:#e5e7eb; position:sticky; top:0; z-index:10; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:0.8rem 0; }
+    .logo { display:flex; align-items:center; gap:0.4rem; font-weight:700; letter-spacing:0.05em; }
+    .logo-mark { width:26px; height:26px; border-radius:999px; border:2px solid #38bdf8; display:flex; align-items:center; justify-content:center; font-size:0.8rem; }
+    .nav-links { display:flex; gap:1.3rem; font-size:0.95rem; }
+    .nav-links a { opacity:0.85; }
+    .nav-links a:hover { opacity:1; color:#38bdf8; }
+    .nav-cta { padding:0.4rem 0.9rem; border-radius:999px; border:1px solid #38bdf8; font-size:0.85rem; background:#0f172a; color:#e5e7eb; cursor:pointer; }
+    .nav-cta:hover { background:#38bdf8; color:#0f172a; }
+
+    /* Hero */
+    .hero { padding:3rem 0 2.5rem; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:2rem; align-items:center; }
+    .hero-tag { display:inline-flex; padding:0.2rem 0.6rem; border-radius:999px; background:#e0f2fe; color:#0369a1; font-size:0.75rem; margin-bottom:0.9rem; }
+    .hero-title { font-size:clamp(2rem,4vw,2.8rem); font-weight:700; margin-bottom:0.7rem; }
+    .hero-subtitle { color:#4b5563; font-size:0.97rem; margin-bottom:1.4rem; max-width:30rem; }
+    .hero-badges { display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1.5rem; font-size:0.8rem; }
+    .hero-badges span { background:#dbeafe; padding:0.25rem 0.6rem; border-radius:999px; color:#0369a1; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem; }
+    .btn-primary { background:linear-gradient(135deg,#0ea5e9,#6366f1); color:#fff; border:none; border-radius:999px; padding:0.7rem 1.2rem; font-size:0.9rem; cursor:pointer; font-weight:600; }
+    .btn-primary:hover { opacity:0.95; transform:translateY(-1px); }
+    .btn-outline { border-radius:999px; border:1px solid #94a3b8; padding:0.7rem 1.1rem; font-size:0.88rem; background:transparent; cursor:pointer; }
+    .btn-outline:hover { border-color:#0f172a; }
+
+    .hero-note { font-size:0.78rem; color:#6b7280; }
+
+    .hero-card { background:#fff; border-radius:1.2rem; padding:1.4rem 1.5rem; box-shadow:0 20px 50px rgba(15,23,42,0.18); border:1px solid #e5e7eb; }
+    .hero-card-pill { display:inline-flex; padding:0.25rem 0.7rem; border-radius:999px; background:#ecfdf3; color:#166534; font-size:0.75rem; margin-bottom:0.6rem; }
+    .hero-card-title { font-size:1rem; font-weight:600; margin-bottom:0.7rem; }
+    .hero-card-row { display:flex; justify-content:space-between; margin-bottom:0.8rem; font-size:0.9rem; }
+    .hero-card-row small { color:#6b7280; display:block; }
+    .hero-card-divider { height:1px; background:#e5e7eb; margin:0.8rem 0; }
+    .hero-card-tagline { font-size:0.85rem; color:#4b5563; margin-bottom:0.9rem; }
+    .hero-card-footnote { font-size:0.7rem; color:#9ca3af; margin-top:0.5rem; }
+
+    /* Sections */
+    section { padding:2.5rem 0 2rem; }
+    section h2 { font-size:1.4rem; margin-bottom:0.6rem; text-align:center; }
+    section p.section-subtitle { text-align:center; font-size:0.9rem; color:#6b7280; margin-bottom:1.8rem; }
+
+    /* Features */
+    .features-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.4rem; }
+    .feature-card { background:#fff; border-radius:1rem; padding:1rem 1rem; border:1px solid #e5e7eb; font-size:0.88rem; }
+    .feature-title { font-weight:600; margin-bottom:0.3rem; }
+    .feature-text { color:#6b7280; font-size:0.85rem; }
+
+    /* Footer */
+    footer { margin-top:2rem; padding:1.5rem 0 2rem; border-top:1px solid #e5e7eb; font-size:0.78rem; color:#6b7280; }
+    .footer-inner { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; align-items:center; }
+    .footer-links { display:flex; gap:1rem; }
+    .footer-links a:hover { color:#0f172a; }
+
+    @media (max-width:900px) {
+      .hero-grid { grid-template-columns:minmax(0,1fr); }
+      .hero-card { order:-1; margin-bottom:1rem; }
+      .features-grid { grid-template-columns:minmax(0,1fr); }
+    }
+    @media (max-width:640px) {
+      .nav-links { display:none; }
+      .nav-cta { display:none; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">SL</div>
+        <span>SecureLife</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="plans.html">Plans</a>
+        <a href="claims.html">Claims</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html"><button class="nav-cta">Get a Quote</button></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-tag">Trusted insurance for modern families</span>
+        <h1 class="hero-title">Insurance that actually puts you first.</h1>
+        <p class="hero-subtitle">
+          Protect your life, health, home and vehicle with flexible, transparent plans from SecureLife Insurance.
+        </p>
+        <div class="hero-badges">
+          <span>No hidden fees</span>
+          <span>24×7 claim support</span>
+          <span>Paperless onboarding</span>
+        </div>
+        <div class="hero-actions">
+          <a href="contact.html"><button class="btn-primary">Get Free Quote</button></a>
+          <a href="plans.html"><button class="btn-outline">View Plans</button></a>
+        </div>
+        <p class="hero-note">Get a customized quote in under 2 minutes. No credit card required.</p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-pill">Instant online quote</div>
+        <h3 class="hero-card-title">Your Protection Snapshot</h3>
+        <div class="hero-card-row">
+          <div>
+            <small>Starting premium</small>
+            <strong>₹899 / month</strong>
+          </div>
+          <div>
+            <small>Coverage up to</small>
+            <strong>₹1 Cr</strong>
+          </div>
+        </div>
+        <div class="hero-card-divider"></div>
+        <p class="hero-card-tagline">
+          Answer a few simple questions and we’ll suggest a plan tailored to your family and lifestyle.
+        </p>
+        <a href="contact.html"><button class="btn-primary" style="width:100%;">Start My Free Assessment</button></a>
+        <p class="hero-card-footnote">
+          No medical tests for most applicants. You can upgrade or cancel anytime.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Highlight features -->
+  <section>
+    <div class="container">
+      <h2>Why choose SecureLife?</h2>
+      <p class="section-subtitle">Simple, transparent insurance backed by real people, not just paperwork.</p>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3 class="feature-title">Digital first, human always</h3>
+          <p class="feature-text">
+            Buy and manage your policy completely online, with real advisors just a call or WhatsApp away.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Flexible coverage</h3>
+          <p class="feature-text">
+            Start with what you need today and easily increase your cover as your life and responsibilities grow.
+          </p>
+        </article>
+        <article class="feature-card">
+          <h3 class="feature-title">Fast claims</h3>
+          <p class="feature-text">
+            Dedicated claims specialists ensure your claim is processed quickly when you need us the most.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> SecureLife Insurance Co. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
